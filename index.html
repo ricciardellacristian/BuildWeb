@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Unity WebGL Player | Addressables</title>
     <meta name="description" content="">
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
@@ -29,15 +32,16 @@
     </div>
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/BuildWeb.loader.js";
+      var cacheSuffix = "?v=" + encodeURIComponent("20260619124748");
+      var loaderUrl = buildUrl + "/BuildWeb.loader.js" + cacheSuffix;
       var config = {
-        dataUrl: buildUrl + "/BuildWeb.data",
-        frameworkUrl: buildUrl + "/BuildWeb.framework.js",
-        codeUrl: buildUrl + "/BuildWeb.wasm",
+        dataUrl: buildUrl + "/BuildWeb.data" + cacheSuffix,
+        frameworkUrl: buildUrl + "/BuildWeb.framework.js" + cacheSuffix,
+        codeUrl: buildUrl + "/BuildWeb.wasm" + cacheSuffix,
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Addressables",
-        productVersion: "1.0",
+        productVersion: "20260619124748",
       };
 
       var container = document.querySelector("#unity-container");
